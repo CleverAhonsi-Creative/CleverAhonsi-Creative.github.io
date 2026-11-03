@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Portfolio of Ahonsi Clever: infographics, diagrams, dashboards and data visuals.">
+<meta name="description" content="Portfolio of Ahonsi Clever: case studies, infographics, diagrams, dashboards and data visuals.">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Clever Ahonsi Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -194,6 +194,52 @@ footer .wrap{padding-block:40px;display:grid;gap:14px}
   .explain div:last-child{border-bottom:0}
 }
 @media (max-width:420px){ .pursuits li{grid-template-columns:1fr auto} .pursuits b{grid-column:1/-1;text-align:left} }
+
+/* Case study */
+.s-ok{fill:var(--ok)} .b-ok{background:var(--ok)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:6px}
+.facts div{display:grid}.facts b{font-weight:600;font-size:.95rem}
+.case-hero{display:grid;grid-template-columns:auto 1fr;gap:0;background:var(--surface);border:1px solid var(--rule);margin-bottom:40px}
+.score{padding:22px 28px;border-right:1px solid var(--rule);display:grid;align-content:center;justify-items:start}
+.score strong{font:800 4.5rem var(--f-display);font-stretch:112%;color:var(--accent);line-height:1}
+.score>span{font:500 1.4rem var(--f-display);color:var(--muted);margin-top:-8px}
+.score p{margin-top:8px;max-width:16ch}
+.hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.hero-stats div{padding:22px 18px;border-right:1px solid var(--rule);display:grid;align-content:center;gap:4px;min-width:0}
+.hero-stats div:last-child{border-right:0}
+.hero-stats strong{font:800 1.9rem var(--f-display);font-stretch:112%;font-variant-numeric:tabular-nums;line-height:1.1}
+.hero-stats span{font-size:.82rem;color:var(--muted)}
+.hero-stats .bad{background:var(--accent-soft)}.hero-stats .bad strong{color:var(--accent)}
+.grades{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--rule);background:var(--surface)}
+.grades div{padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.grades div:nth-child(3n){border-right:0}.grades div:nth-last-child(-n+3){border-bottom:0}
+.g{font:500 .7rem var(--f-mono);font-style:normal;letter-spacing:.05em;padding:3px 8px;white-space:nowrap}
+.g-ok{color:var(--ok);border:1px solid var(--ok)}.g-mid{color:var(--c4);border:1px solid var(--c4)}
+.g-poor{background:var(--accent-soft);color:var(--accent)}.g-fail{background:var(--accent);color:var(--surface)}
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.qa div{display:flex;gap:12px;align-items:center;padding:12px 14px;background:var(--surface);border:1px solid var(--rule);font-size:.92rem;min-width:0}
+.qa i{font:500 .72rem var(--f-mono);font-style:normal;letter-spacing:.05em;width:38px;text-align:center;padding:4px 0;flex:none}
+.qa .no i{background:var(--accent);color:var(--surface)}
+.qa .yes i{border:1px solid var(--ok);color:var(--ok)}
+.qa .yes{color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:st;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.steps li{counter-increment:st;background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--steel);padding:14px 16px;display:grid;gap:4px;align-content:start;min-width:0}
+.steps li::before{content:"STEP " counter(st);font:500 .7rem var(--f-mono);letter-spacing:.06em;color:var(--steel)}
+.steps li.crit{border-top-color:var(--accent)}.steps li.crit::before{color:var(--accent)}
+.steps b{font:600 1rem var(--f-display);font-stretch:112%}
+.steps span{font-size:.86rem;color:var(--muted)}
+.ba{display:grid;border:1px solid var(--rule);background:var(--surface);overflow-x:auto}
+.ba div{display:grid;grid-template-columns:1fr 1.3fr 1.3fr;gap:12px;padding:10px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;min-width:420px}
+.ba div:last-child{border-bottom:0}
+.ba div span:nth-child(2){color:var(--muted);text-decoration:line-through;text-decoration-color:var(--accent)}
+.ba div:first-child span{text-decoration:none!important}
+.ba div span:nth-child(3){font-weight:600}
+@media (max-width:860px){.case-hero{grid-template-columns:1fr}.score{border-right:0;border-bottom:1px solid var(--rule);grid-auto-flow:column;align-items:end;justify-content:start;gap:8px}.score p{margin:0 0 6px 10px}}
+@media (max-width:760px){.hero-stats,.grades,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hero-stats div:nth-child(2){border-right:0}.hero-stats div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+ .grades div{border-right:0!important;border-bottom:1px solid var(--rule)!important}.grades div:nth-child(odd){border-right:1px solid var(--rule)!important}.grades div:nth-last-child(-n+2){border-bottom:0!important}
+ .qa{grid-template-columns:1fr}}
+@media (max-width:420px){.steps,.grades{grid-template-columns:1fr}.grades div{border-right:0!important}}
 </style>
 </head>
 <body>
@@ -216,6 +262,7 @@ footer .wrap{padding-block:40px;display:grid;gap:14px}
       </div>
     </div>
     <nav class="toc" aria-label="Sections">
+      <a href="#case">Case study: ad audit</a>
       <a href="#samples">Infographics &amp; diagrams</a>
       <a href="#data">Data &amp; statistics</a>
       <a href="#work">Experience</a>
@@ -225,10 +272,134 @@ footer .wrap{padding-block:40px;display:grid;gap:14px}
 </header>
 
 <main>
+<section id="case">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="mono">Section 1 · Case study</p>
+      <h2>The campaign that worked perfectly at the wrong job</h2>
+      <p class="lede">An audit of a two-week paid social campaign for an established ballet school. The school wanted enrollment inquiries. The campaign was set up to win page follows. I turned the ad platform's raw screenshots into a data set, found what went wrong, and laid out a rebuild plan the owners could act on.</p>
+      <div class="facts">
+        <div><span class="mono">Client</span><b>Performing-arts school (name withheld)</b></div>
+        <div><span class="mono">Scope</span><b>Data extraction, analysis, report design</b></div>
+        <div><span class="mono">Deliverable</span><b>16-page audit &amp; rebuild plan</b></div>
+      </div>
+    </div>
+
+    <div class="case-hero">
+      <div class="score"><strong>2</strong><span>/10</span><p class="mono">As a lead-generation campaign</p></div>
+      <div class="hero-stats">
+        <div><strong>$594</strong><span>spent in 14 days</span></div>
+        <div><strong>43,493</strong><span>people reached</span></div>
+        <div><strong>$8.08</strong><span>per 1,000 views, efficient</span></div>
+        <div class="bad"><strong>0</strong><span>inquiries measured</span></div>
+      </div>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-1</span><h3>Scorecard: what was fine and what failed</h3></div>
+      <div class="grades">
+        <div><span class="mono">Creative quality</span><i class="g g-ok">STRONG</i></div>
+        <div><span class="mono">Cost efficiency</span><i class="g g-mid">FAIR</i></div>
+        <div><span class="mono">Targeting</span><i class="g g-poor">POOR</i></div>
+        <div><span class="mono">Budget delivery</span><i class="g g-poor">POOR</i></div>
+        <div><span class="mono">Objective fit</span><i class="g g-fail">FAILING</i></div>
+        <div><span class="mono">Measurement</span><i class="g g-fail">FAILING</i></div>
+      </div>
+      <p class="note">Leading with the grades told the owners in ten seconds that the ad itself was good. The problems were in the setup, which is cheaper to fix.</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-2</span><h3>The funnel ends in a question mark</h3></div>
+      <div class="board scroll"><svg viewBox="0 0 640 276" width="100%" style="min-width:520px;display:block" role="img" aria-label="Funnel: 43,493 reached, 1,218 page visits, 76 reactions or shares, 33 follows, enrollment inquiries unknown."><path d="M40.0 20 L600.0 20 L516.3 64 L123.7 64 Z" class="s-steel" opacity="0.95"/><text x="320" y="40" text-anchor="middle" font-size="15" font-weight="500" class="s-surface">43,493</text><text x="320" y="56" text-anchor="middle" font-size="10" class="s-surface" opacity=".85">REACHED</text><path d="M123.7 70 L516.3 70 L451.4 114 L188.6 114 Z" class="s-steel" opacity="0.78"/><text x="320" y="90" text-anchor="middle" font-size="15" font-weight="500" class="s-surface">1,218</text><text x="320" y="106" text-anchor="middle" font-size="10" class="s-surface" opacity=".85">VISITED THE PAGE</text><path d="M188.6 120 L451.4 120 L431.8 164 L208.2 164 Z" class="s-steel" opacity="0.61"/><text x="320" y="140" text-anchor="middle" font-size="15" font-weight="500" class="s-surface">76</text><text x="320" y="156" text-anchor="middle" font-size="10" class="s-surface" opacity=".85">REACTED OR SHARED</text><path d="M208.2 170 L431.8 170 L346.0 214 L294.0 214 Z" class="s-steel" opacity="0.44"/><text x="320" y="190" text-anchor="middle" font-size="15" font-weight="500" class="s-surface">33</text><text x="320" y="206" text-anchor="middle" font-size="10" class="s-surface" opacity=".85">FOLLOWED</text><rect x="294" y="220" width="52" height="44" class="s-accsoft st-acc" stroke-width="1.5" stroke-dasharray="4 3"/><text x="320" y="249" text-anchor="middle" font-size="22" font-weight="500" class="s-acc">?</text><text x="360" y="238" font-size="11" font-weight="500" class="s-acc">ENROLLMENT INQUIRIES</text><text x="360" y="253" font-size="10" class="s-muted">Not tracked, so never counted.</text></svg></div>
+      <p class="note">Widths use a log scale so a 43,000-to-33 drop still fits on one page. The dashed box is the only number the school cared about, and nothing was installed to count it.</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-3</span><h3>Where the budget went</h3></div>
+      <div class="board"><div class="donut-row"><svg viewBox="0 0 220 220" width="200" role="img" aria-label="Authorized budget of 1,120 dollars: 294 spent in the home area, 300 spent across the river, 526 never spent."><path d="M110.0 10.0 A100 100 0 0 1 209.7 117.8 L173.8 115.0 A64 64 0 0 0 110.0 46.0 Z" class="s-steel st-surf" stroke-width="2"/><path d="M209.7 117.8 A100 100 0 0 1 91.0 208.2 L97.9 172.8 A64 64 0 0 0 173.8 115.0 Z" class="s-acc st-surf" stroke-width="2"/><path d="M91.0 208.2 A100 100 0 0 1 110.0 10.0 L110.0 46.0 A64 64 0 0 0 97.9 172.8 Z" class="s-c5 st-surf" stroke-width="2"/>
+<text x="110" y="106" text-anchor="middle" font-size="24" font-weight="500" class="s-ink">$1,120</text>
+<text x="110" y="126" text-anchor="middle" font-size="10" class="s-muted">AUTHORIZED</text></svg><ul class="legend"><li><i class="sw b-steel"></i><span>Spent this side of the river</span><b>$294</b></li><li><i class="sw b-acc"></i><span>Spent across the river</span><b>$300</b></li><li><i class="sw b-c5"></i><span>Never spent</span><b>$526</b></li></ul></div></div>
+      <p class="note">Less than half the approved budget was spent, and about half of what was spent reached people across a river with no nearby bridge, a 35-minute drive from the school.</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-4</span><h3>Four of fourteen days delivered nothing</h3></div>
+      <div class="board scroll"><svg viewBox="0 0 640 240" width="100%" style="min-width:520px;display:block" role="img" aria-label="Daily page visits over 14 days, with two stretches of two days each where the ad delivered nothing.">
+<rect x="162" y="36" width="68" height="164" class="s-accsoft"/><text x="196.0" y="52" text-anchor="middle" font-size="10" class="s-acc">AD STOPPED</text><rect x="442" y="36" width="68" height="164" class="s-accsoft"/><text x="476.0" y="52" text-anchor="middle" font-size="10" class="s-acc">AD STOPPED</text><line x1="44" x2="588" y1="200.0" y2="200.0" class="st-rule"/><text x="38" y="203.0" text-anchor="end" font-size="9.5" class="s-muted">0</text><line x1="44" x2="588" y1="146.7" y2="146.7" class="st-rule"/><text x="38" y="149.7" text-anchor="end" font-size="9.5" class="s-muted">80</text><line x1="44" x2="588" y1="93.3" y2="93.3" class="st-rule"/><text x="38" y="96.3" text-anchor="end" font-size="9.5" class="s-muted">160</text><line x1="44" x2="588" y1="40.0" y2="40.0" class="st-rule"/><text x="38" y="43.0" text-anchor="end" font-size="9.5" class="s-muted">240</text><path d="M56 200 L56 166.0 L96 170.0 L136 113.3 L176 200.0 L216 200.0 L256 41.3 L296 53.3 L336 80.0 L376 120.0 L416 163.3 L456 200.0 L496 200.0 L536 143.3 L576 137.3 L576 200 Z" class="s-steel" opacity=".15"/><polyline points="56,166.0 96,170.0 136,113.3 176,200.0 216,200.0 256,41.3 296,53.3 336,80.0 376,120.0 416,163.3 456,200.0 496,200.0 536,143.3 576,137.3" fill="none" class="st-steel" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="256" cy="41.3" r="4.5" class="s-steel"/><text x="264" y="37.3" font-size="10" class="s-steel">PEAK 238</text>
+<text x="56" y="216" text-anchor="middle" font-size="9.5" class="s-muted">22</text><text x="96" y="216" text-anchor="middle" font-size="9.5" class="s-muted">23</text><text x="136" y="216" text-anchor="middle" font-size="9.5" class="s-muted">24</text><text x="176" y="216" text-anchor="middle" font-size="9.5" class="s-muted">25</text><text x="216" y="216" text-anchor="middle" font-size="9.5" class="s-muted">26</text><text x="256" y="216" text-anchor="middle" font-size="9.5" class="s-muted">27</text><text x="296" y="216" text-anchor="middle" font-size="9.5" class="s-muted">28</text><text x="336" y="216" text-anchor="middle" font-size="9.5" class="s-muted">29</text><text x="376" y="216" text-anchor="middle" font-size="9.5" class="s-muted">30</text><text x="416" y="216" text-anchor="middle" font-size="9.5" class="s-muted">31</text><text x="456" y="216" text-anchor="middle" font-size="9.5" class="s-muted">1</text><text x="496" y="216" text-anchor="middle" font-size="9.5" class="s-muted">2</text><text x="536" y="216" text-anchor="middle" font-size="9.5" class="s-muted">3</text><text x="576" y="216" text-anchor="middle" font-size="9.5" class="s-muted">4</text><text x="588" y="234" text-anchor="end" font-size="9.5" class="s-muted">DAY OF CAMPAIGN · PAGE VISITS (ESTIMATED FROM CHART)</text></svg></div>
+      <p class="note">The platform labelled only one day's value. I rebuilt the daily series from the chart so the days add up to the reported total. Individual days are estimates; the two dead stretches are certain.</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-5</span><h3>Out of every 100 people reached</h3></div>
+      <div class="board"><div class="donut-row" style="align-items:flex-start"><svg viewBox="0 0 476 116" width="100%" style="max-width:476px;display:block" role="img" aria-label="Out of every 100 people reached: 2 too young, 35 in the core parent age, 18 parents of older children, 45 past parenting age."><rect x="0" y="0" width="20" height="20" rx="10" class="s-c5"/><rect x="24" y="0" width="20" height="20" rx="10" class="s-c5"/><rect x="48" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="72" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="96" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="120" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="144" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="168" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="192" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="216" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="240" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="264" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="288" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="312" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="336" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="360" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="384" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="408" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="432" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="456" y="0" width="20" height="20" rx="10" class="s-ok"/><rect x="0" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="24" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="48" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="72" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="96" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="120" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="144" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="168" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="192" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="216" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="240" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="264" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="288" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="312" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="336" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="360" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="384" y="24" width="20" height="20" rx="10" class="s-ok"/><rect x="408" y="24" width="20" height="20" rx="10" class="s-c4"/><rect x="432" y="24" width="20" height="20" rx="10" class="s-c4"/><rect x="456" y="24" width="20" height="20" rx="10" class="s-c4"/><rect x="0" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="24" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="48" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="72" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="96" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="120" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="144" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="168" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="192" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="216" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="240" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="264" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="288" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="312" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="336" y="48" width="20" height="20" rx="10" class="s-c4"/><rect x="360" y="48" width="20" height="20" rx="10" class="s-acc"/><rect x="384" y="48" width="20" height="20" rx="10" class="s-acc"/><rect x="408" y="48" width="20" height="20" rx="10" class="s-acc"/><rect x="432" y="48" width="20" height="20" rx="10" class="s-acc"/><rect x="456" y="48" width="20" height="20" rx="10" class="s-acc"/><rect x="0" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="24" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="48" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="72" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="96" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="120" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="144" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="168" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="192" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="216" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="240" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="264" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="288" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="312" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="336" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="360" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="384" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="408" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="432" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="456" y="72" width="20" height="20" rx="10" class="s-acc"/><rect x="0" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="24" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="48" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="72" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="96" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="120" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="144" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="168" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="192" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="216" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="240" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="264" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="288" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="312" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="336" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="360" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="384" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="408" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="432" y="96" width="20" height="20" rx="10" class="s-acc"/><rect x="456" y="96" width="20" height="20" rx="10" class="s-acc"/></svg><ul class="legend"><li><i class="sw b-c5" style="border-radius:50%"></i><span>Too young to decide</span><b>2</b></li><li><i class="sw b-ok" style="border-radius:50%"></i><span>Core parent age (25–44)</span><b>35</b></li><li><i class="sw b-c4" style="border-radius:50%"></i><span>Parents of older kids (45–54)</span><b>18</b></li><li><i class="sw b-acc" style="border-radius:50%"></i><span>Past parenting age (55+)</span><b>45</b></li></ul></div></div>
+      <p class="note">More of the budget reached people past parenting age than reached actual parents. The default audience found the cheapest people to follow a page.</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-6</span><h3>Half the reach landed outside the drivable area</h3></div>
+      <div class="board scroll"><svg viewBox="0 0 660 156" width="100%" style="min-width:520px;display:block" role="img" aria-label="Reach by area: 50.9 percent across the river, 41.9 percent home catchment, 6.5 percent nearby city, 0.6 percent outlying."><text x="0" y="27" font-size="11" class="s-ink">Across the river (35+ min drive)</text><rect x="230" y="12" width="322.4" height="22" class="s-acc"/><text x="560.4" y="27" font-size="11" font-weight="500" class="s-acc">50.9%</text><text x="0" y="63" font-size="11" class="s-ink">Home catchment</text><rect x="230" y="48" width="265.4" height="22" class="s-steel"/><text x="503.4" y="63" font-size="11" font-weight="500" class="s-steel">41.9%</text><text x="0" y="99" font-size="11" class="s-ink">Nearby city</text><rect x="230" y="84" width="41.2" height="22" class="s-c5"/><text x="279.2" y="99" font-size="11" font-weight="500" class="s-muted">6.5%</text><text x="0" y="135" font-size="11" class="s-ink">Outlying area</text><rect x="230" y="120" width="3.8" height="22" class="s-c5"/><text x="241.8" y="135" font-size="11" font-weight="500" class="s-muted">0.6%</text></svg></div>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-7</span><h3>Can the data answer the owner's questions?</h3></div>
+      <div class="qa">
+        <div class="no"><i>NO</i><span>How many inquiries did $594 produce?</span></div>
+        <div class="no"><i>NO</i><span>What did one inquiry cost?</span></div>
+        <div class="no"><i>NO</i><span>Which age group produced inquiries?</span></div>
+        <div class="no"><i>NO</i><span>Which area produced inquiries?</span></div>
+        <div class="no"><i>NO</i><span>Did anyone reach the sign-up form?</span></div>
+        <div class="yes"><i>YES</i><span>How many people saw the ad? 43,493</span></div>
+        <div class="yes"><i>YES</i><span>How many followed the page? 33, at $18 each</span></div>
+      </div>
+      <p class="note">Every question about enrollment was unanswerable. Every answerable question was about a number the school didn't need. That gap was the whole finding.</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-8</span><h3>The rebuild, in order</h3></div>
+      <ol class="steps">
+        <li class="crit"><b>Install conversion tracking</b><span>Before another dollar is spent. Without it, nothing can be measured.</span></li>
+        <li class="crit"><b>Decide where leads land</b><span>An in-app form piped into the school's existing follow-up system.</span></li>
+        <li><b>Relaunch with a leads objective</b><span>A fresh campaign, so the platform optimizes for inquiries, not follows.</span></li>
+        <li><b>Keep the form short</b><span>Name, contact and child's age, plus one "when would you start?" question.</span></li>
+        <li><b>Rewrite the ad copy</b><span>Drop the pasted link; let a sign-up button carry the click. Keep the strong image.</span></li>
+        <li><b>Reply within five minutes</b><span>Automatic text and email on every new inquiry.</span></li>
+      </ol>
+      <p class="note">Numbered because order matters here: the first two steps had to happen before any further spend.</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head"><span class="tag">C-9</span><h3>What success looks like next time</h3></div>
+      <div class="board scroll"><svg viewBox="0 0 640 110" width="100%" style="min-width:520px;display:block" role="img" aria-label="Cost per inquiry targets: 25 to 35 dollars is the target, up to 50 is acceptable, over 60 means investigate.">
+<text x="0" y="46" font-size="11" class="s-ink">COST PER INQUIRY</text>
+<rect x="150.0" y="30" width="143.8" height="26" class="s-steelsoft"/>
+<rect x="293.75" y="30" width="57.5" height="26" class="s-ok"/>
+<rect x="351.25" y="30" width="86.2" height="26" class="s-c4"/>
+<rect x="437.5" y="30" width="57.5" height="26" class="s-steelsoft"/>
+<rect x="495.0" y="30" width="115.0" height="26" class="s-acc"/>
+<text x="322.5" y="22" text-anchor="middle" font-size="10" class="s-ok">TARGET</text>
+<text x="394.4" y="22" text-anchor="middle" font-size="10" class="s-c4">ACCEPTABLE</text>
+<text x="552.5" y="22" text-anchor="middle" font-size="10" class="s-acc">INVESTIGATE</text>
+<text x="150.0" y="74" text-anchor="middle" font-size="9.5" class="s-muted">$0</text><text x="293.8" y="74" text-anchor="middle" font-size="9.5" class="s-muted">$25</text><text x="351.2" y="74" text-anchor="middle" font-size="9.5" class="s-muted">$35</text><text x="437.5" y="74" text-anchor="middle" font-size="9.5" class="s-muted">$50</text><text x="495.0" y="74" text-anchor="middle" font-size="9.5" class="s-muted">$60</text><text x="610.0" y="74" text-anchor="middle" font-size="9.5" class="s-muted">$80</text>
+<text x="0" y="100" font-size="10" class="s-muted">At ~$40 per inquiry and 1 in 3 enrolling, each new student costs about $120 to win.</text>
+</svg></div>
+      <div class="ba">
+        <div><span class="mono">Setting</span><span class="mono">Before</span><span class="mono">After</span></div>
+        <div><b>Goal</b><span>Page visits &amp; follows</span><span>Leads</span></div>
+        <div><b>Area</b><span>Default local radius</span><span>10 miles, river side excluded</span></div>
+        <div><b>Age</b><span>13–65+</span><span>28–50</span></div>
+        <div><b>Daily budget</b><span>$80</span><span>$30 while testing</span></div>
+        <div><b>Call to action</b><span>Link pasted in text</span><span>Sign-up button</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="samples">
   <div class="wrap">
     <div class="sec-head">
-      <p class="mono">Section 1</p>
+      <p class="mono">Section 2</p>
       <h2>Infographics &amp; diagrams</h2>
       <p class="lede">Process flows, org charts, technical infographics and page layouts.</p>
     </div>
@@ -347,7 +518,7 @@ footer .wrap{padding-block:40px;display:grid;gap:14px}
 <section id="data">
   <div class="wrap">
     <div class="sec-head">
-      <p class="mono">Section 2</p>
+      <p class="mono">Section 3</p>
       <h2>Data visuals &amp; statistics, explained simply</h2>
       <p class="lede">Dashboards and charts that make numbers easy to scan, and four maths ideas drawn so anyone can follow them.</p>
     </div>
@@ -552,7 +723,7 @@ footer .wrap{padding-block:40px;display:grid;gap:14px}
     <div class="contact">
       <span class="email">ahonsiclever@gmail.com</span>
     </div>
-    <p class="note">Figures in these pieces are sample data used to show design approach.</p>
+    <p class="note">Case study figures come from real campaign data, with the client anonymized. Figures in the infographic and data-visual samples are sample data used to show design approach.</p>
   </div>
 </footer>
 
